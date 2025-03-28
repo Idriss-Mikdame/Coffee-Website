@@ -19,12 +19,22 @@
         })
     }
  
+    const nvalink =  document.querySelectorAll('.nav__link')
+    const linkAction = () =>{
+        const navMenue = document.getElementById('nav-menu')
+        navMenue.classList.remove('show-menu')
+    }
+    nvalink.forEach(n => n.addEventListener('click' , linkAction))
  /*=============== REMOVE MENU MOBILE ===============*/
  
  
  /*=============== ADD SHADOW HEADER ===============*/
- 
- 
+ const shadowHeader  = () =>{
+    const header = document.getElementById('header')
+    this.scrollY >= 50 ? header.classList.add('shadow-header')
+                       : header.classList.remove('shadow-header')
+ }
+ window.addEventListener('scroll', shadowHeader)
  /*=============== SWIPER POPULAR ===============*/
  
  
